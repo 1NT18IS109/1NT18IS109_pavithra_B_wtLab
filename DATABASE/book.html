@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pavithra N</h1>
+    <h2>1NT18IS109</h2>
+    <input type="text" id="ID" placeholder="Enter book ID ">
+    <br>
+    <br>
+    <input type="text" id="Name" placeholder="Book Name">
+    <br>
+    <br>
+    <input type="text" id="Genere" placeholder="Book Genere">
+    <br>
+    <br>
+    <input type="text" id="Cost" placeholder="Book Cost">
+    <br>
+    <br>
+    <input type="text" id="year" placeholder="Book published year">
+    <br>
+    <br>
+    <button id="submit">Submit</button>
+    <script>
+        var alldetails = [{BookId:"1",
+            BookName:"Harry Potter",
+            BookGenere:"Fan",
+            BookCost:"122",
+            BookPublishedYear:"2007"}];
+        
+        let sub=document.getElementById("submit");
+        sub.addEventListener('click',()=>{
+            let id=document.getElementById("ID").value;
+            let name=document.getElementById("Name").value;
+            let genere=document.getElementById("Genere").value;
+            let cost=document.getElementById("Cost").value;
+            let year=document.getElementById("year").value;
+            console.log("BookId",id);
+            console.log("BookName",name);
+            console.log("BookGenere",genere);
+            console.log("Cost",cost);
+            console.log("Year",year);
+            let newobj = {BookId: id,
+                BookName:name,
+                BookGenere:genere,
+                BookCost:cost,
+                BookPublishedYear:year}
+            alldetails.push(newobj);
+        }
+        )
+        
+    </script>
+    <br>
+    <h3>Search Book by ID</h3>
+    <br>
+    <input type="text" id="sid" placeholder="Enter Book ID">
+    <br>
+    <br>
+    <button id="submit2">Search</button>
+  
+    <script>
+        let sub2=document.getElementById("submit2");
+        sub2.addEventListener('click',()=>{
+            let sid=document.getElementById("sid").value;
+            let det = alldetails.find(det => det.BookId === sid) ;
+            console.log(det);
+        })
+    </script>
+   
+</body>
+</html>
