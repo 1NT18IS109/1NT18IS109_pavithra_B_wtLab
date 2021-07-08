@@ -1,0 +1,82 @@
+<!-- Title: demo on how to build a castle game  -->
+<!-- Description: checking for how the addEventListener events works -->
+<!-- Author:  Pavithra.N_1NT18IS109 -->
+<!-- Date:  07-04-2021 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Castle</title>
+</head>
+<body>
+    <style>
+         #demo {
+        width:fit-content;
+        
+        padding: 400px;
+        
+        border: 5px solid;
+        margin: 50;
+        background-color: #f8f5f5;
+        }
+       
+        #demo1 {
+        width: 300px;
+        padding: 100px;
+        border: 5px solid;
+        margin: 50;
+        background-color: #ee0968;
+        
+        }
+        #demo2 {
+        width: 200px;
+        padding: 50px;
+        border: 5px solid;
+        margin: 50;
+        background-color: #800080;
+        }
+        #epath {
+        width: 450px;
+        padding: 20px;
+        border: 5px solid;
+        margin: 50;
+        background-color: rgb(82, 151, 241);
+        }
+    </style>
+    <center><h1>Welcome To the Castle</h1> </center>
+    <div id="demo">
+        <div id="demo1">
+            <div id="demo2">
+                <div id="epath">
+                </div> 
+            </div>
+        </div>
+    </div>
+    <script>
+        let first=document.getElementById('demo');
+       first.addEventListener('mouseover',()=>{
+           console.log('You have entered castle');
+       })
+       let second=document.getElementById('demo1');
+       second.addEventListener('mouseover',()=>{
+           console.log('You have entered garden');
+       })
+       let third=document.getElementById('demo2');
+       third.addEventListener('dblclick',()=>{
+           console.log("You are in danger zone");
+       })
+
+       fourth=document.getElementById('epath');
+       fourth.addEventListener('click',()=>{
+           fourth.remove(); 
+           console.log('You are on the escape path');
+       
+       })
+    </script>
+
+</body>
+</html>
